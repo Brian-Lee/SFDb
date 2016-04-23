@@ -38,6 +38,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     String provider;
     protected String latitude, longitude;
     protected boolean gps_enabled, network_enabled;
+
+    String SFD0 = "nearby SF district";
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -74,7 +77,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     public void onLocationChanged(Location location) {
         txtLat = (TextView) findViewById(R.id.textview1);
 
-        txtLat.setText("Latitude:" + location.getLatitude() + ", Longitude:" + location.getLongitude());
+        txtLat.setText("Latitude:" + location.getLatitude() + ", Longitude:" + location.getLongitude() + "\n" + "\n" + SFD0 + "\n");
+
+
     }
 
     @Override
