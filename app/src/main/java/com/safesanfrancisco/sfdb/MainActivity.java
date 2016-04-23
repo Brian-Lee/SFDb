@@ -22,7 +22,19 @@ import android.widget.TextView;
 
 import android.util.Log;
 
-public class MainActivity extends AppCompatActivity {
+
+
+
+//public class MainActivity extends AppCompatActivity implements LocationListener {
+public class MainActivity extends AppCompatActivity  {
+    protected LocationManager locationManager;
+    protected LocationListener locationListener;
+    protected Context context;
+    TextView txtLat;
+    String lat;
+    String provider;
+    protected String latitude, longitude;
+    protected boolean gps_enabled, network_enabled;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
