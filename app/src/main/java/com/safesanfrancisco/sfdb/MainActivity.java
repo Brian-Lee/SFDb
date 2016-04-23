@@ -9,6 +9,19 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Context;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.support.v4.app.ActivityCompat;
+import android.widget.TextView;
+
+import android.util.Log;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
