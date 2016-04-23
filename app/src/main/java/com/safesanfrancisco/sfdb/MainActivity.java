@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         txtLat = (TextView) findViewById(R.id.textview1);
-        //txtLat = (TextView) findViewById(R.id.text);
+
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -73,7 +73,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     @Override
     public void onLocationChanged(Location location) {
         txtLat = (TextView) findViewById(R.id.textview1);
-        //txtLat = (TextView) findViewById(R.id.text);
 
         txtLat.setText("Latitude:" + location.getLatitude() + ", Longitude:" + location.getLongitude());
     }
