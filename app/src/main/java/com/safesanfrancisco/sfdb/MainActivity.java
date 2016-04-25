@@ -36,7 +36,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     //protected LocationManager locationManager;
     protected LocationListener locationListener;
     protected Context context;
-    TextView txtLat;
+    //TextView txtLat;
+    TextView outputText;
     //String lat;
     String provider;
     protected String latitude, longitude;
@@ -110,7 +111,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        txtLat = (TextView) findViewById(R.id.textview1);
+        //txtLat = (TextView) findViewById(R.id.textview1);
+        outputText = (TextView) findViewById(R.id.textview1);
 
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -138,9 +140,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         String district = "Not San Francisco";
         lat = currentLocation.getLatitude();
         lon = currentLocation.getLongitude();
-        txtLat = (TextView) findViewById(R.id.textview1);
+        outputText = (TextView) findViewById(R.id.textview1);
 
-        txtLat.setText("Latitude:" + currentLocation.getLatitude() + ", Longitude:" + currentLocation.getLongitude() + "\n" + "\n" + SFD0 + "\n");
+        outputText.setText("Latitude:" + currentLocation.getLatitude() + ", Longitude:" + currentLocation.getLongitude() + "\n" + "\n" + SFD0 + "\n");
 
 
 
@@ -190,7 +192,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         ////	R.strings.main_activity.see_alert_message_for_logitude_and_latitude_ = "xxx";
 
         ////textView.setText("yyy");
-        txtLat.setText(str);//textView.setText(str);
+        outputText.setText(str);//textView.setText(str);
 
         //Toast.makeText(getBaseContext(), str, Toast.LENGTH_LONG).show();
     }
