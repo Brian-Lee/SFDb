@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -31,6 +32,7 @@ import android.widget.Toast;
 
 import com.safesanfrancisco.sfdb.mapPoint;
 
+import java.util.Arrays;
 
 
 public class MainActivity extends AppCompatActivity implements LocationListener {
@@ -223,6 +225,14 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+
+        // Set the text view as the activity layout
+        //setContentView(textView);
+
+        //yourTextView.setMovementMethod(new ScrollingMovementMethod())
+        //textView.setMovementMethod(new ScrollingMovementMethod());
+        outputText.setMovementMethod(new ScrollingMovementMethod());
+
     }
 
     @Override
@@ -4164,6 +4174,24 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
 
 
 
+
+
+        //targetDistrictsArray.sort();
+        //Arrays.sort(targetDistrictsArray, new FloatStringStringComparator());
+        Arrays.sort(targetDistricts, new DistrictComparator());
+
+
+
+
+        //Location.distanceBetween(double startLatitude, double startLongitude, double endLatitude, double endLongitude, float[] results)
+
+
+        //if (37.747900 < lat < 37.765476) and ( -122.496239 < long < -122.476327) then central sunset
+
+        if (37.734122 < lat && lat < 37.766222 && -122.496239 < lon && lon < -122.457572)  {district = "Inner Sunset";}
+        if (37.747900 < lat && lat < 37.765476 && -122.496239 < lon && lon < -122.476327)  {district = "Central Sunset";}
+        if (37.734122 < lat && lat < 37.764594 && -122.510230 < lon && lon < -122.493964)  {district = "Outer Sunset";}
+        if (37.764119 < lat && lat < 37.774093 && -122.510959 < lon && lon < -122.453195)  {district = "Golden Gate Park";}
 
 
 
