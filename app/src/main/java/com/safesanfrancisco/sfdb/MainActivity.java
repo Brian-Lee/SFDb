@@ -172,10 +172,11 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         str += "\n\n\n";
         str += "targetDistrict=\n";
      /////44   for (int i=0;i<125; i++)
-     /////44   {
-     /////44       str += targetDistricts[i].citySection +" - ";
-     /////44       str += targetDistricts[i].district+" - "+targetDistricts[i].distance+" miles\n";
-      /////44  }
+         for (int i=0;i<0; i++)
+        {
+            str += targetDistricts[i].citySection +" - ";
+            str += targetDistricts[i].district+" - "+targetDistricts[i].distance+" miles\n";
+        }
 
         str += "\n\n\n";
         str += "targetDistrict=\n";
