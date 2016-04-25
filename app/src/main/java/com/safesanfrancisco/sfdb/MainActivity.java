@@ -27,6 +27,9 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import android.widget.Toast;
+
+import com.safesanfrancisco.sfdb.mapPoint;
 
 public class MainActivity extends AppCompatActivity implements LocationListener {
     //public class MainActivity extends AppCompatActivity  {
@@ -38,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     String provider;
     protected String latitude, longitude;
     protected boolean gps_enabled, network_enabled;
+
+    //mapPoint testmp = new mapPoint(0,0);
 
     String SFD0 = "nearby SF district";
 
@@ -84,11 +89,22 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
     @Override
     public void onProviderDisabled(String provider) {
+
+
+        /******** Called when User off Gps *********/
+
+        Toast.makeText(getBaseContext(), "Gps turned off ", Toast.LENGTH_LONG).show();
+
         Log.d("Latitude", "disable");
     }
 
     @Override
     public void onProviderEnabled(String provider) {
+
+
+        /******** Called when User on Gps  *********/
+
+        Toast.makeText(getBaseContext(), "Gps turned on ", Toast.LENGTH_LONG).show();
         Log.d("Latitude", "enable");
     }
 
