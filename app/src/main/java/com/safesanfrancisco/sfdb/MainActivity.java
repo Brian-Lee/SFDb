@@ -195,11 +195,17 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     public String targetZoomLevel10 = "z";
 
     public Location targetLocation = new Location("");//provider name is unecessary
+    //commented version below is from SFDistricts3 and may be less resource intenseive since
+    //it only checks every 3 seconds
+   // locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
+   //         3000,   // 3 sec
+   //         10, this);
     public String targetDistrict = "";
     public float targetDistance = 999999999;
 
     public String targetZoomLevel = "0z";
 
+    String district = "Not San Francisco";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -239,7 +245,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     public void onLocationChanged(Location currentLocation) {
 
 
-        String district = "Not San Francisco";
+
         lat = currentLocation.getLatitude();
         lon = currentLocation.getLongitude();
         outputText = (TextView) findViewById(R.id.textview1);
