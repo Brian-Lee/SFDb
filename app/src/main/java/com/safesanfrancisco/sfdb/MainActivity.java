@@ -100,16 +100,7 @@ String outputText = "finding location";
     public String closestDistrict9 = "";
     public String closestDistrict10 = "";
 
-    public String targetZoomLevel1 = "z";
-    public String targetZoomLevel2 = "z";
-    public String targetZoomLevel3 = "z";
-    public String targetZoomLevel4 = "z";
-    public String targetZoomLevel5 = "z";
-    public String targetZoomLevel6 = "z";
-    public String targetZoomLevel7 = "z";
-    public String targetZoomLevel8 = "z";
-    public String targetZoomLevel9 = "z";
-    public String targetZoomLevel10 = "z";
+
 
     public Location targetLocation = new Location("");//provider name is unecessary
     //commented version below is from SFDistricts3 and may be less resource intenseive since
