@@ -771,7 +771,7 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
         District d35 = new District(targetDistrict,targetDistance,targetZoomLevel,
                 targetLocation.getLatitude(),targetLocation.getLongitude());
         targetDistricts[35] = d35;
-        d35.addMapPoint(000,000);
+        d35.addMapPoint(0,0);
         d35.getDistance(currentLocation);
         d35.citySection = "";
 
@@ -2789,7 +2789,7 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
         District d91 = new District(targetDistrict,targetDistance,targetZoomLevel,
                 targetLocation.getLatitude(),targetLocation.getLongitude());
         targetDistricts[91] = d91;
-        d91.addMapPoint(000,000);
+        d91.addMapPoint(0,0);
         d91.getDistance(currentLocation);
         d91.citySection = "North of Downtown";
 
@@ -2807,7 +2807,7 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
         District d92 = new District(targetDistrict,targetDistance,targetZoomLevel,
                 targetLocation.getLatitude(),targetLocation.getLongitude());
         targetDistricts[92] = d92;
-        d92.addMapPoint(000,000);
+        d92.addMapPoint(0,0);
         d92.getDistance(currentLocation);
         d92.citySection = "";
 
@@ -2825,7 +2825,7 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
         District d93 = new District(targetDistrict,targetDistance,targetZoomLevel,
                 targetLocation.getLatitude(),targetLocation.getLongitude());
         targetDistricts[93] = d93;
-        d93.addMapPoint(000,000);
+        d93.addMapPoint(0,0);
         d93.getDistance(currentLocation);
         d93.citySection = "";
 
@@ -2843,7 +2843,7 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
         District d94 = new District(targetDistrict,targetDistance,targetZoomLevel,
                 targetLocation.getLatitude(),targetLocation.getLongitude());
         targetDistricts[94] = d94;
-        d94.addMapPoint(000,000);
+        d94.addMapPoint(0,0);
         d94.getDistance(currentLocation);
         d94.citySection = "";
 
@@ -2861,7 +2861,7 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
         District d95 = new District(targetDistrict,targetDistance,targetZoomLevel,
                 targetLocation.getLatitude(),targetLocation.getLongitude());
         targetDistricts[95] = d95;
-        d95.addMapPoint(000,000);
+        d95.addMapPoint(0,0);
         d95.getDistance(currentLocation);
         d95.citySection = "Downtown";
 
@@ -2879,7 +2879,7 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
         District d96 = new District(targetDistrict,targetDistance,targetZoomLevel,
                 targetLocation.getLatitude(),targetLocation.getLongitude());
         targetDistricts[96] = d96;
-        d96.addMapPoint(000,000);
+        d96.addMapPoint(0,0);
         d96.getDistance(currentLocation);
         d96.citySection = "";
 
@@ -2896,7 +2896,7 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
         District d97 = new District(targetDistrict,targetDistance,targetZoomLevel,
                 targetLocation.getLatitude(),targetLocation.getLongitude());
         targetDistricts[97] = d97;
-        d97.addMapPoint(000,000);
+        d97.addMapPoint(0,0);
         d97.getDistance(currentLocation);
         d97.citySection = "Downtown";
 
@@ -2912,7 +2912,7 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
         District d98 = new District(targetDistrict,targetDistance,targetZoomLevel,
                 targetLocation.getLatitude(),targetLocation.getLongitude());
         targetDistricts[98] = d98;
-        d98.addMapPoint(000,000);
+        d98.addMapPoint(0,0);
         d98.getDistance(currentLocation);
         d98.citySection = "Southern";
 
@@ -2928,7 +2928,7 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
         District d99 = new District(targetDistrict,targetDistance,targetZoomLevel,
                 targetLocation.getLatitude(),targetLocation.getLongitude());
         targetDistricts[99] = d99;
-        d99.addMapPoint(000,000);
+        d99.addMapPoint(0,0);
         d99.getDistance(currentLocation);
         d99.citySection = "";
 
@@ -2939,11 +2939,11 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
         targetLocation.setLongitude(-122.4413936);
         targetZoomLevel = "15z";
         targetDistance =  (float) (targetLocation.distanceTo(currentLocation)/metersInMile);
-        setVars();	    ;
+        setVars();
         District d100 = new District(targetDistrict,targetDistance,targetZoomLevel,
                 targetLocation.getLatitude(),targetLocation.getLongitude());
         targetDistricts[100] = d100;
-        d100.addMapPoint(000,000);
+        d100.addMapPoint(0,0);
         d100.getDistance(currentLocation);
         d100.citySection = "";
 
@@ -2957,7 +2957,7 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
         District d101 = new District(targetDistrict,targetDistance,targetZoomLevel,
                 targetLocation.getLatitude(),targetLocation.getLongitude());
         targetDistricts[101] = d101;
-        d101.addMapPoint(000,000);
+        d101.addMapPoint(0,0);
         d101.getDistance(currentLocation);
         d101.citySection = "";
 
@@ -2970,7 +2970,7 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
         District d102 = new District(targetDistrict,targetDistance,targetZoomLevel,
                 targetLocation.getLatitude(),targetLocation.getLongitude());
         targetDistricts[102] = d102;
-        d102.addMapPoint(000,000);
+        d102.addMapPoint(0,0);
         d102.getDistance(currentLocation);
         d102.citySection = "";
 
@@ -4217,8 +4217,7 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
 
         str += "\n\n\n";
         str += "targetDistrict=\n";
-     //   for (int i=0;i<125; i++)
-         for (int i=0;i<100; i++)
+        for (int i=0;i<125; i++)
         {
             str += targetDistricts[i].citySection +" - ";
             str += targetDistricts[i].district+" - "+targetDistricts[i].distance+" miles\n";
