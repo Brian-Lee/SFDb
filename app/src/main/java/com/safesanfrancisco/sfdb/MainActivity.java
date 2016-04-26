@@ -87,16 +87,7 @@ String outputText = "finding location";
     //public FloatStringString[] targetDistrictsArray = new FloatStringString[151];
     public District[] targetDistricts = new District[151];
 
-    public float shortestDistance1 = 999999999;
-    public float shortestDistance2 = 999999999;
-    public float shortestDistance3 = 999999999;
-    public float shortestDistance4 = 999999999;
-    public float shortestDistance5 = 999999999;
-    public float shortestDistance6 = 999999999;
-    public float shortestDistance7 = 999999999;
-    public float shortestDistance8 = 999999999;
-    public float shortestDistance9 = 999999999;
-    public float shortestDistance10 = 999999999;
+
 
     public String closestDistrict1 = "";
     public String closestDistrict2 = "";
