@@ -105,7 +105,6 @@ String outputText = "finding location";
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //txtLat = (TextView) findViewById(R.id.textview1);
         output = (TextView) findViewById(R.id.textview1);
 
 
