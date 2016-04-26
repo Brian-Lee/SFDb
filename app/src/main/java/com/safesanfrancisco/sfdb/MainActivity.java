@@ -63,7 +63,6 @@ String outputText = "finding location";
     protected String latitude, longitude;
     protected boolean gps_enabled, network_enabled;
 
-    //mapPoint testmp = new mapPoint(0,0);
 
     String SFD0 = "nearby SF district";
 
@@ -81,24 +80,11 @@ String outputText = "finding location";
     public TextView textView;
     public Double lat;
     public Double lon;
-    //public mapPoint x;
     public Double metersInMile = 1609.34;
 
     //public FloatStringString[] targetDistrictsArray = new FloatStringString[151];
     public District[] targetDistricts = new District[151];
 
-
-
-    public String closestDistrict1 = "";
-    public String closestDistrict2 = "";
-    public String closestDistrict3 = "";
-    public String closestDistrict4 = "";
-    public String closestDistrict5 = "";
-    public String closestDistrict6 = "";
-    public String closestDistrict7 = "";
-    public String closestDistrict8 = "";
-    public String closestDistrict9 = "";
-    public String closestDistrict10 = "";
 
 
 
