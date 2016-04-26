@@ -40,81 +40,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
 
 
-
-
-
-
-
-
-
-    //	protected void setVars(Bundle savedInstanceState) {
-    protected void setVars() {
-
-
-
-
-
-        targetDistance = (float)Math.round(targetDistance * 1000) / 1000;
-
-
-
-
-
-        if(targetDistance<shortestDistance1)
-        {
-            //move old answers down before setting the closest
-
-            shortestDistance10 = shortestDistance9;
-            closestDistrict10 = closestDistrict9;
-            targetZoomLevel10 = targetZoomLevel9;
-
-            shortestDistance9 = shortestDistance8;
-            closestDistrict9 = closestDistrict8;
-            targetZoomLevel9 = targetZoomLevel8;
-
-            shortestDistance8 = shortestDistance7;
-            closestDistrict8 = closestDistrict7;
-            targetZoomLevel8 = targetZoomLevel7;
-
-            shortestDistance7 = shortestDistance6;
-            closestDistrict7 = closestDistrict6;
-            targetZoomLevel7 = targetZoomLevel6;
-
-
-            shortestDistance6 = shortestDistance5;
-            closestDistrict6 = closestDistrict5;
-            targetZoomLevel6 = targetZoomLevel5;
-
-            shortestDistance5 = shortestDistance4;
-            closestDistrict5 = closestDistrict4;
-            targetZoomLevel5 = targetZoomLevel4;
-
-            shortestDistance4 = shortestDistance3;
-            closestDistrict4 = closestDistrict3;
-            targetZoomLevel4 = targetZoomLevel3;
-
-            shortestDistance3 = shortestDistance2;
-            closestDistrict3 = closestDistrict2;
-            targetZoomLevel3 = targetZoomLevel2;
-
-            shortestDistance2 = shortestDistance1;
-            closestDistrict2 = closestDistrict1;
-            targetZoomLevel2 = targetZoomLevel1;
-
-
-            shortestDistance1=targetDistance;
-            closestDistrict1 = targetDistrict;
-            targetZoomLevel1 = targetZoomLevel;
-        }
-
-
-
-
-
-
-    }
-
-
+String outputText = "finding location";
 
 
 
@@ -131,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     protected LocationListener locationListener;
     protected Context context;
     //TextView txtLat;
-    TextView outputText;
+    TextView output;
     //String lat;
     String provider;
     protected String latitude, longitude;
@@ -212,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //txtLat = (TextView) findViewById(R.id.textview1);
-        outputText = (TextView) findViewById(R.id.textview1);
+        output = (TextView) findViewById(R.id.textview1);
 
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -237,7 +163,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
         //yourTextView.setMovementMethod(new ScrollingMovementMethod())
         //textView.setMovementMethod(new ScrollingMovementMethod());
-        outputText.setMovementMethod(new ScrollingMovementMethod());
+        output.setMovementMethod(new ScrollingMovementMethod());
 
     }
 
@@ -248,9 +174,10 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
         lat = currentLocation.getLatitude();
         lon = currentLocation.getLongitude();
-        outputText = (TextView) findViewById(R.id.textview1);
+        output = (TextView) findViewById(R.id.textview1);
 
-        outputText.setText("Latitude:" + currentLocation.getLatitude() + ", Longitude:" + currentLocation.getLongitude() + "\n" + "\n" + SFD0 + "\n");
+        outputText = "Latitude:" + currentLocation.getLatitude() + ", Longitude:" + currentLocation.getLongitude() + "\n" + "\n" + SFD0 + "\n";
+        output.setText(outputText);
 
 
 
@@ -4238,7 +4165,7 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
         ////	R.strings.main_activity.see_alert_message_for_logitude_and_latitude_ = "xxx";
 
         ////textView.setText("yyy");
-        outputText.setText(str);//textView.setText(str);
+        output.setText(str);//textView.setText(str);
 
         //Toast.makeText(getBaseContext(), str, Toast.LENGTH_LONG).show();
     }
