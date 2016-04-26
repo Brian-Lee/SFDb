@@ -4218,7 +4218,7 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
         str += "\n\n\n";
         str += "targetDistrict=\n";
      //   for (int i=0;i<125; i++)
-         for (int i=0;i<50; i++)
+         for (int i=0;i<100; i++)
         {
             str += targetDistricts[i].citySection +" - ";
             str += targetDistricts[i].district+" - "+targetDistricts[i].distance+" miles\n";
