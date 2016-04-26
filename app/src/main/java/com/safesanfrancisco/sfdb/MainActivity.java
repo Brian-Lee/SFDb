@@ -2984,7 +2984,7 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
         District d103 = new District(targetDistrict,targetDistance,targetZoomLevel,
                 targetLocation.getLatitude(),targetLocation.getLongitude());
         targetDistricts[103] = d103;
-        d103.addMapPoint(000,000);
+        d103.addMapPoint(0,0);
         d103.getDistance(currentLocation);
         d103.citySection = "Downtown";
 
@@ -3287,7 +3287,7 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
         targetLocation.setLongitude(-122.3978989);
         targetZoomLevel = "16z";
         targetDistance =  (float) (targetLocation.distanceTo(currentLocation)/metersInMile);
-        setVars();	    ;
+        setVars();
         District d118 = new District(targetDistrict,targetDistance,targetZoomLevel,
                 targetLocation.getLatitude(),targetLocation.getLongitude());
         targetDistricts[118] = d118;
@@ -4218,7 +4218,7 @@ Balboa High School is situated on Cayuga Avenue, and City College of San Francis
         str += "\n\n\n";
         str += "targetDistrict=\n";
      //   for (int i=0;i<125; i++)
-         for (int i=0;i<30; i++)
+         for (int i=0;i<50; i++)
         {
             str += targetDistricts[i].citySection +" - ";
             str += targetDistricts[i].district+" - "+targetDistricts[i].distance+" miles\n";
